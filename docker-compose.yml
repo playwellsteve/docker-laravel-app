@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    image: larvel-www
+    container_name: laravel-www
+    build:
+      context : .
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8888:80
