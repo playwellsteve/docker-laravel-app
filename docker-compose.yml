@@ -20,6 +20,15 @@ services:
       MYSQL_PASSWORD: secret
     ports:
       - 13306:3306
+  redis:
+    container_name: laravel-redis
+    image: redis:4-alpine
+    ports:
+      - 16379:6379
+    volumes:
+      - redis:/data
 volumes:
   mysql:
+    driver: "local"
+  redis:
     driver: "local"
