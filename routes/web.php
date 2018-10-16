@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', function () {
-    return 'Hello World';
+    return 'Hello World from our Laravel Application';
 });

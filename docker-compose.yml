@@ -6,6 +6,8 @@ services:
     build:
       context : .
       dockerfile: docker/Dockerfile
+    volumes:
+      - .:/var/www/html
     ports:
       - 8888:80
   mysql:
