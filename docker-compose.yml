@@ -6,6 +6,8 @@ services:
     build:
       context : .
       dockerfile: docker/Dockerfile
+    env_file:
+      - .docker.env
     volumes:
       - .:/var/www/html
     ports:
