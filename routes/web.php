@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return 'Hello World from our Laravel Application';
 });
+
+Route::get('/log', function () {
+
+    app('log')->info('Test of Logging');
+    return 'OK';
+});
