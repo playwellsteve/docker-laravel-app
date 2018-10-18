@@ -24,3 +24,5 @@ Route::get('/log', function () {
     app('log')->info('Test of Logging');
     return 'OK';
 });
+
+Route::get('/podcasts', 'PodcastController@index');
