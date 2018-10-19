@@ -34,7 +34,7 @@ elif [ "$role" = "scheduler" ]; then
     done
 elif [ "$role" = "queue" ]; then
     # echo "Running the queue"
-    ln -sf /etc/supervisor/conf.d-available/app.conf /etc/supervisor/conf.d/queue.conf
+    ln -sf /etc/supervisor/conf.d-available/queue.conf /etc/supervisor/conf.d/queue.conf
         exec supervisord -c /etc/supervisor/supervisord.conf
 
     # php /var/www/html/artisan queue:work --verbose --tries=3 --timeout=90
