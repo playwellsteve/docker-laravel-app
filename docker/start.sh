@@ -21,7 +21,7 @@ fi
 echo "The role is $role ..."
 
 if [ "$role" = "app" ]; then
-    exec apache2-foreground
+    exec supervisord -c /etc/supervisor/supervisord.conf
 elif [ "$role" = "scheduler" ]; then
     echo "Scheduler is running"
     while [ true ]
